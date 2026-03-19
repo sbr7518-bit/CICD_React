@@ -1,6 +1,6 @@
 import { useMutation } from "@tanstack/react-query"
 import useUserStore from "../store/userStore"
-import { logoutMemberApi } from "../api/memberAPI";
+import { logoutMemberApi } from "../api/memberApi";
 
 export const useLogoutMemberMutation = () => {
     const { logout } = useUserStore();

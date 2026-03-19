@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query"
-import { checkMemberApi } from "../api/memberAPI"
+import { checkMemberApi } from "../api/memberApi"
 
 
 export const useCheckMemberQuery = () => {
