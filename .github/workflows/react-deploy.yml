@@ -53,8 +53,7 @@ jobs:
           aws s3 sync dist s3://${{ secrets.S3_BUCKET_NAME }} --delete
 
       # 7. CloudFront 캐시 무효화
+# 7. CloudFront 캐시 무효화
       - name: Invalidate CloudFront Cache
         run: |
-          aws cloudfront create-invalidation \
-          --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} \
-          --paths "/*"
+          aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
